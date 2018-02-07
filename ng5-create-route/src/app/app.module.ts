@@ -8,6 +8,15 @@ import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'user', component: UserComponent },
+  { path: 'userlist', component: UserListComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+]
 
 @NgModule({
   declarations: [
@@ -18,7 +27,8 @@ import { UserListComponent } from './user-list/user-list.component';
     UserListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
