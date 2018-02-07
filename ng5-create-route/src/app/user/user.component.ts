@@ -8,16 +8,16 @@ import { ActivatedRoute } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class UserComponent implements OnInit {
-  name:any;
+  name: any;
   sub: any;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-  this.sub =  this.route.params.subscribe(params => {
-       this.name = params['name'];
+    this.sub = this.route.params.subscribe(params => {
+      this.name = params['name'];
     });
   }
-  ngOnDistroy(){
+  ngOnDistroy() {
     this.sub.unsubscribe();
   }
 
