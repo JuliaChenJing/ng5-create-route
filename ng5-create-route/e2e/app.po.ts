@@ -13,4 +13,9 @@ export class AppPage {
   getAboutButton() {
     return element(by.css('[routerlink="/about"]')).getText();
   }
+
+  getAboutText() {
+    return element(by.css('app-about h2')).getText();
+  }
+
 }
