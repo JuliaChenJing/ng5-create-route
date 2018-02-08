@@ -6,7 +6,11 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
+  getHomePageText() {
     return element(by.css('app-home h2')).getText();
+  }
+
+  getAboutButton() {
+    return element(by.css('[routerlink="/about"]')).getText();
   }
 }

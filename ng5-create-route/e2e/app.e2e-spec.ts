@@ -11,6 +11,13 @@ describe('ng5-create-route App', () => {
     //navigate to default route
     page.navigateTo();
     //browser.pause();
-    expect(page.getParagraphText()).toEqual('Home Page');
+    expect(page.getHomePageText()).toEqual('Home Page');
+  });
+
+  it('should display About Button', () => {
+    //navigate to default route
+    page.navigateTo();
+    //browser.pause();
+    expect(page.getAboutButton()).toEqual('About');
   });
 });
